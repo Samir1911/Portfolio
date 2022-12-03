@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto+Condensed&display=swap"
+        rel="stylesheet">
+    <title>Samir1911 | Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+            background-image: url(images/bg1.webp);
+            background-repeat: no-repeat;
+            background-size: 1200px;
+            background-position: center;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight:700;
+        }
+        #intro{
+            width:100%;
+            height:500px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:50px;
+            box-sizing: border-box;
+        }
+        #intro img{
+            width:600px;
+            height:500px;
+        }
+        #intro >div{
+            width:400px;
+        }
+        h1{
+            font-size:50px;
+            color:hsl(233, 89%, 34%);
+            font-family: 'Permanent Marker', cursive;
+            word-spacing: 6px;
+        }
+        #intro a{
+            background:linear-gradient(to right,rgb(136, 0, 255),rgb(57, 103, 229));
+            padding:10px 20px;
+            border-radius: 25px;
+            border-width:0px;
+            color:white;
+            letter-spacing: 1px;
+            margin-right:15px;
+        }
+        #intro p{
+            margin-bottom:50px;
+            word-spacing:2px;
+            font-size:18px;
+            line-height: 25px;
+        }
+        footer {
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            margin-top:30px;
+        }
+        footer img{
+            width:30px;
+            height:30px;
+            margin:0 20px;
+        }
+        
+        #preview{
+            width:100%;
+            position:absolute;
+            display:none;
+            place-items:center;
+            height:100vh;
+            backdrop-filter: blur(5px);
+        }
+        #close{
+            width:30px;
+            height:30px;
+            background:white;
+            padding:7px;
+            box-sizing: border-box;
+            position: absolute;
+        }
+        #res_img{
+            height:650px;
+        }
+        #preview div{
+            display:flex;
+            flex-direction: column;
+            /* justify-content: flex-end; */
+            align-items: flex-end;
+        }
+        
+        @media(max-width:1100px){
+            #intro img{
+                width:500px;
+                height:400px;
+            }
+        }
+        @media(max-width:990px){
+            #intro img{
+                width:350px;
+                height:300px;
+            }
+            #intro >div{
+                width:350px;
+            }
+            h1{
+                font-size:40px;
+            }
+            #intro p{
+                width:350px;
+            }
+            #intro,footer{
+                margin-top:-30px;
+            }
+        }
+        @media(max-width:750px){
+            #intro{
+                flex-direction:column-reverse;
+                height:fit-content;
+                text-align:center;
+                padding-top:0px;
+            }
+            main{
+                height:600px;
+            }
+            #intro,h1,p,#intro a{
+                margin-top:-15px;
+            }
+            #intro a{
+                margin-top:0px;
+            }
+            footer{
+                margin: -5px 0 10px 0;
+            }
+        }
+        
+        @media(max-width:425px){
+            #res_img{
+                width:100%;
+                height:550px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="preview">
+        <div>
+            <img id="close" src="images/close.svg" alt="close">
+            <img id="res_img" src="images/resume.png" alt="preview-resume">
+        </div>
+    </div>
+    <header>
+        <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+        </div>
+    </header>
+    <main>
+        
+        <div id="intro" >
+            <div>
+                <h1>HI! I am <br> Samir Abdul.</h1>
+                <p>I am passionate at coding and web development. I am self-taught FrontEnd Developer, who is passionate to build websites.</p>
+                <a href="Samir Abdul Resume.pdf" download="Samir Abdul Resume.pdf">Download Resume</a>
+                <a id="pre_btn" href="#"> Preview </a>
+            </div> 
+            <img src="images/person.png" alt="Person">
+        </div>
+    </main>
+    <footer>
+        <a target="blank" href="mailto: samirabdul450@gmail.com"><img src="images/mail.png" alt="mail"></a>
+        <a target="blank" href="https://github.com/Samir1911"><img src="images/github.svg" alt="github"></a>
+        <a target="blank" href="https://www.hackerrank.com/Samir1911"><img src="images/Hackerrank.png" alt="HackerRank"></a>
+        <a target="blank" href="https://www.frontendmentor.io/profile/Samir1911"><img src="images/favicon-32x32.png" alt="Frontendmentor.io"></a>
+        <a target="blank" href="https://in.linkedin.com/in/samir-abdul-612291215/"><img src="images/li.png" alt="Linkedin"></a>
+    </footer>
+    <script>
+        var close=document.querySelector("#close");
+        var prev=document.querySelector("#preview");
+        var Pre_btn=document.querySelector("#pre_btn");
+        close.addEventListener("click",function(){
+            prev.style.display="none";
+        })
+        Pre_btn.addEventListener("click",function(){
+            prev.style.display="grid";
+        })
+    </script>
+</body>
+</html>
